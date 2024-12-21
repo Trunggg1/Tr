@@ -1,0 +1,14 @@
+<resources>
+    <!-- Basic Colors -->
+    <color name="white">#FFFFFF</color> <!-- White color -->
+    <color name="black">#000000</color> <!-- Black color -->
+
+    <!-- Red Theme Colors -->
+    <color name="dark_red">#D32F2F</color> <!-- Dark red background -->
+    <color name="red_border">#B71C1C</color> <!-- Darker red for border -->
+    <color name="soft_red">#EF9A9A</color> <!-- Soft red, slightly darker -->
+
+    <!-- Secondary Colors -->
+    <color name="primary_text">#FFFFFF</color> <!-- White for text -->
+    <color name="background_color">#FFEBEE</color> <!-- Light red background -->
+</resources>

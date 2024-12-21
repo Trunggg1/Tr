@@ -1,0 +1,409 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#C62828"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:contentDescription="Profile Image"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userRoleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sitemanagers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/greetingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Sitemanger Page"
+                android:textSize="16sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Main Menu Buttons -->
+    <LinearLayout
+        android:id="@+id/mainMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/setupSiteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Setup Donation Site"
+            android:backgroundTint="#E53935"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/downloadDonorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download Registered Donors List"
+            android:backgroundTint="#E53935"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/inputDonationDataButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Donation Data"
+            android:backgroundTint="#E53935"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/registerVolunteerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register as Volunteer"
+            android:backgroundTint="#E53935"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- Setup Donation Site Layout -->
+    <LinearLayout
+        android:id="@+id/setupSiteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <fragment
+            android:id="@+id/googleMapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/siteAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Site Address"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/donationHoursEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Donation Hours (8AM or 9AM)"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/bloodTypesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Required Blood Types"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveSetupButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/backFromSetupButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Back"
+                android:backgroundTint="#F44336"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Download Donors Layout -->
+    <LinearLayout
+        android:id="@+id/downloadDonorsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/donorsListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registered Donors List Goes Here"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/saveDonorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/backFromDonorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Input Donation Data Layout -->
+    <LinearLayout
+        android:id="@+id/inputDonationDataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/addressInputDonationData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/amountOfBloodCollected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount Of Blood Collected (ml)"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/bloodTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Types"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/savedDataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/saveDonationDataButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/backFromDonationDataButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Register Volunteer Layout -->
+    <LinearLayout
+        android:id="@+id/registerVolunteerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/addressRegisterAsVolunteer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/volunteerNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Volunteer Name"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/volunteerBloodTypesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Blood Types"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:id="@+id/savedRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/saveVolunteerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/backFromRegisterVolunteerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#C62828">
+
+        <!-- Logout Button -->
+        <LinearLayout
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- About Us Button -->
+        <LinearLayout
+            android:id="@+id/aboutUsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_about_us"
+                android:contentDescription="About Us Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- About Us Section -->
+    <LinearLayout
+        android:id="@+id/aboutUsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Blood Donation App!
+
+Our mission is to make it simple and convenient to find and register at blood donation sites. With this app, you can locate nearby donation sites, view details like address, hours, and required blood types, and sign up to donate.
+
+You can also volunteer to support donation events and help ensure the availability of blood for emergencies, surgeries, and life-saving treatments.
+
+Together, we can make a difference and save countless lives. Join us in building a healthier and more compassionate community."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:textColor="#000000" />
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backFromAboutUsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

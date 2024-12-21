@@ -1,0 +1,44 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="#B71C1C">
+
+    <!-- Profile Image -->
+<ImageView
+    android:id="@+id/profileImageView"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:src="@drawable/ic_profile_placeholder"
+    android:contentDescription="Profile Image"
+    android:layout_marginEnd="16dp" />
+
+    <!-- User Information -->
+<LinearLayout
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<!-- Username Text -->
+<TextView
+    android:id="@+id/userNameTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sitemanagers"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF" />
+
+<!-- Greeting Text -->
+<TextView
+    android:id="@+id/greetingTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Good Morning"
+    android:textSize="16sp"
+    android:textColor="#FFFFFF" />
+</LinearLayout>
+    </LinearLayout>

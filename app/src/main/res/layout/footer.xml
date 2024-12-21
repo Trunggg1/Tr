@@ -1,0 +1,61 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#D32F2F"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Home Section -->
+<LinearLayout
+android:id="@+id/homeButton"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:orientation="vertical"
+android:gravity="center"
+android:clickable="true"
+android:focusable="true">
+
+<ImageView
+    android:layout_width="36dp"
+android:layout_height="36dp"
+android:src="@drawable/ic_logout" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Home"
+    android:textSize="14sp"
+android:textColor="@android:color/white"
+android:textStyle="bold" />
+</LinearLayout>
+
+    <!-- About Us Section -->
+<LinearLayout
+android:id="@+id/aboutUsButton"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:orientation="vertical"
+android:gravity="center"
+android:clickable="true"
+android:focusable="true">
+
+<ImageView
+    android:layout_width="36dp"
+android:layout_height="36dp"
+android:src="@drawable/ic_about_us" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="About Us"
+    android:textSize="14sp"
+android:textColor="@android:color/white"
+android:textStyle="bold" />
+</LinearLayout>
+
+    </LinearLayout>
